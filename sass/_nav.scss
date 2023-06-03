@@ -5,16 +5,23 @@
     justify-content: center;
     position: relative;
 
+    .header__tittle{
+        position:absolute;
+        color: $colorclaro;
+        font-family: $letra;
+        font-weight: 700;
+        font-size:$letra-grande;
+        left: 30px;
+        top: 30px;
+        z-index: 1;
+    }
+
     .nav{
         background-color:$colorrojo;
         display: flex;
-        justify-content: end;
         width: 100%;
         height: 90px;
         position: relative;
-
-
-
         .nav__list{
             width: 100%;
             height: 100%;
@@ -31,16 +38,16 @@
                 padding: 30px 30px;
                 transition: background-color .3s ease;
 
-                &:hover{
-                    background-color:#771010;  
-                }
-
                 a{
                     color: $colorclaro;
                     font-family: $letra;
                     text-decoration: none;
                     font-weight: 600;
+                    transition: background-color .3s ease;
                     
+                    &:hover{
+                        background-color:#771010;  
+                    }
                 }
             }
         }

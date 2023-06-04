@@ -30,3 +30,28 @@ body{
     padding: 0;
     box-sizing: border-box;
 }
+
+// media querys 
+@media screen and (max-width:720px) {
+    body{
+        .header{
+            .nav{
+                .nav__list{
+                    display: none;
+                }
+            }
+        }
+
+        .main{
+            width: 100%;
+            .main__welcome{
+                width: 100%;
+            }
+        }
+
+        .box__whatsapp{
+            width: 60px;
+            height: 60px;
+        }
+    }
+}

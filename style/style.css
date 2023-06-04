@@ -14,6 +14,21 @@ body {
   box-sizing: border-box;
 }
 
+@media screen and (max-width: 720px) {
+  body .header .nav .nav__list {
+    display: none;
+  }
+  body .main {
+    width: 100%;
+  }
+  body .main .main__welcome {
+    width: 100%;
+  }
+  body .box__whatsapp {
+    width: 60px;
+    height: 60px;
+  }
+}
 .header {
   width: 100%;
   display: flex;
@@ -23,6 +38,7 @@ body {
   z-index: 1;
 }
 .header .header__tittle {
+  width: 200px;
   position: fixed;
   color: #ffffff;
   font-family: "Karla", sans-serif;
@@ -121,6 +137,7 @@ body {
 .cards__container {
   margin-top: 10px;
   padding: 10px;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
@@ -213,7 +230,7 @@ div .btn::after {
   font-size: 14px;
   width: 100%;
   height: 100%;
-  left: -200px;
+  left: -500px;
   bottom: 0;
   transition: left 0.3s ease-in-out;
 }
@@ -232,7 +249,6 @@ div .btn i {
   right: 20px;
   display: flex;
   flex-direction: column;
-  /* background-color: #ffffff; */
   width: 90px;
   height: 90px;
   cursor: pointer;
@@ -244,12 +260,13 @@ div .btn i {
   width: 100%;
   height: 100%;
   background-color: #23e088;
-  left: 0;
-  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
   opacity: 0;
   transform: scale(1);
-  animation: onda 1.3s infinite;
+  animation: onda 1.3s linear infinite;
 }
 
 .box__whatsapp::after {
@@ -278,4 +295,31 @@ div .btn i {
   100% {
     transform: scale(1.6);
   }
+}
+.footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  width: 100%;
+  background-color: #B30000;
+}
+.footer .listas__footer {
+  width: 100%;
+  height: 100%;
+  padding: 10px 0px;
+}
+.footer .listas__footer .footer__list {
+  padding: 10px 30px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+.footer .listas__footer .footer__list .list__li {
+  display: block;
+  padding: 5px 0px;
+}
+.footer .listas__footer .footer__list .list__li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: "Karla", sans-serif;
+  font-weight: 300;
 }/*# sourceMappingURL=style.css.map */

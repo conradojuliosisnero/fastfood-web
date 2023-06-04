@@ -34,11 +34,11 @@
 }
 
 div {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 
-  .input {
+  .btn-comprar {
     border: none;
     margin: 5px;
     background-color: $colormarron;
@@ -51,11 +51,33 @@ div {
     font-size: $letra-media;
     cursor: pointer;
     position: relative;
-    transition: background-color 0.3s ease;
+    overflow: hidden;
+
+    &::after {
+      content: "Comprar";
+      position: absolute;
+      background-color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $coloroscuro;
+      font-family: $letra;
+      font-size: $letra-normal;
+      font-weight: 700;
+
+      left:0;
+      top: -100px;
+      width: 100%;
+      height: 100%;
+      transition: top .3s ease-in-out;
+    }
+    &:hover::after {
+      top: 0;
+    }
   }
 
-  .btn{
-    background-color:$colorrojo;
+  .btn {
+    background-color: $colorrojo;
     border: none;
     width: 100%;
     height: 100%;
@@ -65,28 +87,31 @@ div {
     cursor: pointer;
 
     &::after {
-        content: "";
-        position: absolute;
-        background-color: #16e670;
-        width: 100%;
-        height: 100%;
-        left:-200px;
-        bottom:0;
-        transition: left .3s ease-in-out;
-        z-index: 0;
+      content: "Añadir al carro";
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #16e670;
+      color: $colorclaro;
+      font-family: $letra;
+      font-weight: 700;
+      font-size: $letra-normal;
+      width: 100%;
+      height: 100%;
+      left: -200px;
+      bottom: 0;
+      transition: left 0.3s ease-in-out;
     }
 
-    &:hover::after{
-        left: 0;
-        z-index: 1;
+    &:hover::after {
+      left: 0;
     }
-    
-    i{
-        color:#ffffff;
-        font-size: 20px;
-        z-index: 0;
+
+    i {
+      color: #ffffff;
+      font-size: 20px;
+      z-index: 0;
     }
   }
 }
-
-

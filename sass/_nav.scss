@@ -3,10 +3,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: relative;
+  position: fixed;
+  z-index: 1;
 
   .header__tittle {
-    height: 100%;
+    // height: 100%;
     position: fixed;
     color: $colorclaro;
     font-family: $letra;
@@ -18,11 +19,13 @@
   }
 
   .nav {
-    background-color: $colorrojo;
+    background-color: transparent;
     display: flex;
+    justify-content: space-between;
     width: 100%;
     height: 90px;
     position: relative;
+
     .nav__list {
       width: 100%;
       height: 100%;
@@ -36,6 +39,7 @@
         position: relative;
         display: block;
         padding: 30px 30px;
+        border-radius: 50px;
         transition: background-color 0.3s ease;
         &:hover{
             background-color: #761a1a;

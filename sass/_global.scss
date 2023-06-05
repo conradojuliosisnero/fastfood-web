@@ -31,6 +31,14 @@ body{
     box-sizing: border-box;
 }
 
+// funciones 
+
+@mixin caja_flexs($flex, $aling,$justy) {
+    display:$flex;
+    align-items:$aling;
+    justify-content: $justy;
+}
+
 // media querys 
 @media screen and (max-width:720px) {
     body{
